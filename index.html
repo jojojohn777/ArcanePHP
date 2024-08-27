@@ -2,1042 +2,144 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="guide, doc, documentation, api doc, catalog, code documentation, doc, docs, documentation, documentation template, documentation tool, getting started, guide, help, manual, online documentation, reference, specification">
-    <meta name="description" content="Guidex - Online Documentation Tailwind CSS Template.">
-    <meta name="author" content="ashishmaraviya">
+	<script>
+		// Fetch the content of head.html and inject it into the current document's head
+		fetch('components/head.html')
+			.then(response => response.text())
+			.then(data => {
+				document.head.innerHTML += data;
+			})
+			.catch(error => console.error('Error loading head section:', error));
+	</script>
+	<title>ArcanePHP -home</title>
 
-    <title>Arcane-- home</title>
-
-    <!-- App favicon -->
-    <!-- <link rel="shortcut icon" href="assets/img/favicon/favicon.ico"> -->
-
-    <!-- Icon CSS -->
-    <link href="assets/css/vendor/materialdesignicons.min.css" rel="stylesheet">
-    <link href="assets/css/vendor/remixicon.css" rel="stylesheet">
-
-    <!-- Vendor -->
-    <link href="assets/css/vendor/prism.css" rel="stylesheet">
-
-    <!-- tailwindcss -->
-    <script src="assets/js/vendor/tailwindcss3.4.0.js"></script>
-
-    <!-- Main CSS -->
-    <link id="mainCss" href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/dark.css">
-    <style>
-   
-    </style>
 </head>
 
-<body data-gx-mode="light">
-    <main class="wrapper min-h-screen flex flex-col items-stretch sb-collapse">
+<!-- <object data="components/head.html" type="text/html" height="100px" width="100px"></object> -->
 
-        <!-- Loader -->
-        <div id="gx-overlay"
-            class="w-full h-full flex items-center justify-center fixed top-0 right-0 left-0 bottom-0 bg-[#fff] z-[999]"
-            style="display: none;">
-            <div class="gx-ellipsis inline-block relative w-[80px] h-[80px]">
-                <div class="absolute top-[33px] w-[20px] h-[20px] rounded-[50%] opacity-[0.7] scale-0"></div>
-                <div class="absolute top-[33px] w-[20px] h-[20px] rounded-[50%] opacity-[0.7] scale-0"></div>
-                <div class="absolute top-[33px] w-[20px] h-[20px] rounded-[50%] opacity-[0.7] scale-0"></div>
-                <div class="absolute top-[33px] w-[20px] h-[20px] rounded-[50%] opacity-[0.7] scale-0"></div>
-            </div>
-        </div>
+<body>
+	<header class="header fixed-top">
 
-        <!-- Header -->
-        <!-- <iframe src="header.html" frameborder="0"></iframe> -->
-        <!-- sidebar -->
-        <div class="gx-sidebar-overlay"></div>
-        <div class="gx-sidebar w-[270px] max-[1399px]:w-[250px] max-[575px]:w-[270px] fixed top-0 left-0 z-[40]"
-            data-mode="dark">
-            <div class="gx-sb-logo h-[70px] px-[24px] flex items-center justify-start">
-                <a href="index.html" class="sb-full"><img src="assets/img/logo/full-logo.png" alt="logo"
-                        class="w-[100px]"></a>
-                <a href="index.html" class="sb-collapse"><img src="assets/img/logo/collapse-logo.png" alt="logo"
-                        class="w-[33px]"></a>
-            </div>
-            <div class="gx-sb-wrapper">
-                <div class="gx-sb-content">
-                    <ul class="gx-sb-list">
-                        <li class="gx-sb-item sb-drop-item relative py-[5px]">
-                            <a href="javascript:void(0)"
-                                class="gx-drop-toggle w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-dashboard-3-line mr-[10px] text-[19px]"></i>
-                                <span class="condense" style="display: none;">Getting Started<i
-                                        class="drop-arrow ri-arrow-down-s-line"></i></span>
-                            </a>
-                            <ul class="gx-sb-drop condense" style="display: none;">
-                                <li class="list py-[5px] pl-[30px]"><a href="#gx_instructions"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Introduction</a>
-                                </li>
-                                <li class="list py-[5px] pl-[30px]"><a href="#gx_features"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Core Features</a>
-                                </li>
-                                <li class="list py-[5px] pl-[30px]"><a href="#gx_structure"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>File Structure</a>
-                                </li>
-                                <li class="list py-[5px] pl-[30px]"><a href="#gx_starter"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Starter Page</a>
-                                </li>
-                                <li class="list pt-[5px] pl-[30px]"><a href="#gx_custom"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Customization</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="gx-sb-item sb-drop-item relative py-[5px]">
-                            <a href="javascript:void(0)"
-                                class="gx-drop-toggle w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-file-text-line mr-[10px] text-[19px]"></i>
-                                <span class="condense" style="display: none;">Content<i
-                                        class="drop-arrow ri-arrow-down-s-line"></i></span>
-                            </a>
-                            <ul class="gx-sb-drop condense" style="display: none;">
-                                <li class="list py-[5px] pl-[30px]"><a href="content.html#gx_typo"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Typography</a></li>
-                                <li class="list py-[5px] pl-[30px]"><a href="content.html#gx_icons"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Icons</a></li>
-                                <li class="list py-[5px] pl-[30px]"><a href="content.html#gx_code_preview"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Code</a></li>
-                                <li class="list pt-[5px] pl-[30px]"><a href="content.html#gx_img"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Images</a></li>
-                            </ul>
-                        </li>
-                        <li class="gx-sb-item sb-drop-item relative py-[5px]">
-                            <a href="javascript:void(0)"
-                                class="gx-drop-toggle w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-open-source-line mr-[10px] text-[19px]"></i>
-                                <span class="condense" style="display: none;">Source Files<i
-                                        class="drop-arrow ri-arrow-down-s-line"></i></span>
-                            </a>
-                            <ul class="gx-sb-drop condense" style="display: none;">
-                                <li class="list py-[5px] pl-[30px]"><a href="source.html#gx_source_css"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>CSS Files</a></li>
-                                <li class="list py-[5px] pl-[30px]"><a href="source.html#gx_source_js"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>JS Files</a></li>
-                                <li class="list pt-[5px] pl-[30px]"><a href="source.html#gx_source_credit"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Credits</a></li>
-                            </ul>
-                        </li>
-                        <li
-                            class="gx-sb-item-separator relative p-0 w-full h-[1px] leading-[21px] my-[12px] block bg-[#27303e]">
-                        </li>
-                        <li class="gx-sb-title condense relative pt-[15px] pb-[5px] leading-[21px] uppercase text-[#485568] text-[13px] font-semibold"
-                            style="display: none;">Configuration</li>
-                        <li class="gx-sb-item sb-drop-item relative py-[5px]">
-                            <a href="javascript:void(0)"
-                                class="gx-drop-toggle w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-install-line mr-[10px] text-[19px]"></i>
-                                <span class="condense" style="display: none;">Installation<i
-                                        class="drop-arrow ri-arrow-down-s-line"></i></span>
-                            </a>
-                            <ul class="gx-sb-drop condense" style="display: none;">
-                                <li class="list py-[5px] pl-[30px]"><a href="installation.html#gx_local"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Local Server</a>
-                                </li>
-                                <li class="list pt-[5px] pl-[30px]"><a href="installation.html#gx_live"
-                                        class="gx-page-link drop w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]"><i
-                                            class="ri-record-circle-line mr-[10px] text-[12px]"></i>Live Server</a></li>
-                            </ul>
-                        </li>
-                        <li
-                            class="gx-sb-item-separator relative p-0 w-full h-[1px] leading-[21px] my-[12px] block bg-[#27303e]">
-                        </li>
-                        <li class="gx-sb-title condense relative pt-[15px] pb-[5px] leading-[21px] uppercase text-[#485568] text-[13px] font-semibold"
-                            style="display: none;">Info</li>
-                        <li class="gx-sb-item relative py-[5px]">
-                            <a href="log.html"
-                                class="gx-page-link w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-time-line mr-[10px] text-[19px]"></i><span class="condense"
-                                    style="display: none;"><span class="hover-title">Change Log</span> </span>
-                            </a>
-                        </li>
-                        <li class="gx-sb-item relative pt-[5px]">
-                            <a href="thanks.html"
-                                class="gx-page-link w-full text-[14px] text-[#aeb8c7] flex items-center leading-[18px]">
-                                <i class="ri-star-smile-line mr-[10px] text-[19px]"></i><span class="condense"
-                                    style="display: none;"><span class="hover-title">Thank You</span> </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+								src="logo/logo.svg" alt="logo"><span class="logo-text">ArcanePHP</span></a></div>
+				</div><!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
 
-        <!-- main content -->
-        <div class="gx-main-content">
-            <div class="w-full">
-                <!-- Page title & breadcrumb -->
-                <div
-                    class="gx-page-title gx-page-title-2 pb-[24px] px-[12px] flex justify-between md:flex-row flex-col w-full">
-                    <div
-                        class="gx-breadcrumb w-full flex md:flex-row flex-col justify-between md:items-center items-baseline">
-                        <h5 class="m-0 text-[24px] font-semibold text-[#484d54] leading-[1.2]">Getting Started</h5>
-                        <ul class="md:mt-[0] mt-[5px] p-0 flex flex-row">
-                            <li class="text-[13px] text-[#777] leading-[21px] tracking-[0.03rem] font-light relative"><a
-                                    href="index.html" class="text-[#777]">Guidex</a></li>
-                            <li class="text-[13px] text-[#777] leading-[21px] tracking-[0.03rem] font-light relative">
-                                Getting Started</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex flex-wrap sections">
-                    <div class="min-[1200px]:w-[75%] w-full px-[12px]">
-                        <!-- Introduction -->
-                        <div class="gx-block">
-                            <div class="gx-card gx-page-block mb-[24px] bg-[#fff] rounded-[5px]" id="gx_instructions">
-                                <div
-                                    class="gx-card-header header-575 p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                    <h4
-                                        class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                        Introduction</h4>
-                                    <div class="header-tools h-[30px] flex flex-row items-center justify-center">
-                                        <a href="javascript:void(0)"
-                                            class="mr-[10px] gx-full-card w-[30px] h-[30px] flex items-center justify-center text-[#777] border-[1px] border-solid border-[#eee] rounded-[5px]">
-                                            <i class="ri-fullscreen-line text-[#777]" title="Full Screen"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="gx-card-content md:p-[24px] p-[15px]">
-                                    <div class="intro">
-                                        <ul
-                                            class="auth-detail mb-[15px] bg-[#dfe6ed4d] py-[20px] px-[30px] rounded-[5px]">
-                                            <li
-                                                class="py-[5px] text-[14px] tracking-[0.03rem] font-light leading-[28px] text-[#777]">
-                                                <strong class="font-semibold">Item Name : </strong>Guidex - Online
-                                                Documentation Tailwind CSS Template.
-                                            </li>
-                                            <li
-                                                class="py-[5px] text-[14px] tracking-[0.03rem] font-light leading-[28px] text-[#777]">
-                                                <strong class="font-semibold">Item Version : </strong>2.0.0
-                                            </li>
-                                            <li
-                                                class="py-[5px] text-[14px] tracking-[0.03rem] font-light leading-[28px] text-[#777]">
-                                                <strong class="font-semibold">Author : </strong>ashishmaraviya
-                                            </li>
-                                            <li
-                                                class="py-[5px] text-[14px] tracking-[0.03rem] font-light leading-[28px] text-[#777]">
-                                                <strong class="font-semibold">Copyright : </strong> 2024
-                                            </li>
-                                        </ul>
-                                        <p
-                                            class="text-[14px] text-[#777] leading-[28px] tracking-[0.03rem] font-light mb-[16px]">
-                                            Welcome to the documentation for the Guidex template! This page will guide
-                                            you on
-                                            how to use and customize the template to suit your needs.</p>
-                                        <h1 class="text-[28px] font-semibold text-[#484d54] leading-[1.2] mb-[8px]">
-                                            Guidex - Online Documentation Tailwind CSS Template.</h1>
-                                        <p
-                                            class="text-[14px] text-[#777] leading-[28px] tracking-[0.03rem] font-light mb-[16px]">
-                                            An online documentation Tailwind CSS template is a pre-designed structure
-                                            and layout that
-                                            helps developers and creators present their template, projects, or products
-                                            in
-                                            an organized and user-friendly manner on the web. It serves as a guide or
-                                            reference for users, providing comprehensive information about the
-                                            template's
-                                            features, installation process, usage instructions, and other essential
-                                            details.
-                                        </p>
-                                        <p
-                                            class="text-[14px] text-[#777] leading-[28px] tracking-[0.03rem] font-light mb-[16px]">
-                                            The primary purpose of an online documentation template is to facilitate
-                                            effective communication between the developers and end-users by offering a
-                                            clear
-                                            and easy-to-navigate interface for accessing relevant information. Below is
-                                            a
-                                            brief description of the key components typically found in an online
-                                            documentation HTML template:</p>
-                                        <p
-                                            class="text-[14px] text-[#777] leading-[28px] tracking-[0.03rem] font-light mb-[16px]">
-                                            An effective online documentation template provides clear and concise
-                                            information, encourages user engagement, and enhances the overall user
-                                            experience. It simplifies the process of creating comprehensive
-                                            documentation
-                                            and helps developers deliver a valuable product to their users.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Core Features -->
-                        <div class="gx-block">
-                            <div class="gx-card gx-page-block mb-[24px] bg-[#fff] rounded-[5px]" id="gx_features">
-                                <div
-                                    class="gx-card-header header-575 p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                    <h4
-                                        class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                        Core Features</h4>
-                                    <div class="header-tools h-[30px] flex flex-row items-center justify-center">
-                                        <a href="#"
-                                            class="mr-[10px] gx-full-card w-[30px] h-[30px] flex items-center justify-center text-[#777] border-[1px] border-solid border-[#eee] rounded-[5px]">
-                                            <i class="ri-fullscreen-line text-[#777]" title="Full Screen"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="gx-card-content md:p-[24px] p-[15px]">
-                                    <div class="intro">
-                                        <div class="flex flex-wrap mb-[-24px] mx-[-12px]">
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/php.svg"
-                                                        class="w-[50px] h-[50px] mb-[15px]" alt="features">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Bootstrap</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/1.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Bootstrap</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/twig.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Twig</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/phpfastcache.svg" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Phpfastcache</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/11.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        W3 Validate</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/7.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Responsive</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/5.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Google Font</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/4.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Browser Compatibility</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/9.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        SEO Optimization</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/12.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Well Documentation</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/6.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Owl Carousel</h5>
-                                                </div>
-                                            </div>
-                                            <div class="min-[768px]:w-[25%] w-full px-[12px]">
-                                                <div
-                                                    class="feature-card mb-[24px] py-[30px] px-[15px] bg-[#fff] flex items-center justify-center flex-col rounded-[5px]">
-                                                    <img src="assets/img/features/10.png" alt="features"
-                                                        class="w-[50px] h-[50px] mb-[15px]">
-                                                    <h5
-                                                        class="text-[14px] font-semibold text-[#484d54] leading-[1.2] m-0">
-                                                        Slick Carousel</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- File Structure -->
-                        <div class="gx-block">
-                            <div class="gx-card gx-page-block mb-[24px] bg-[#fff] rounded-[5px]" id="gx_structure">
-                                <div
-                                    class="gx-card-header header-575 p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                    <h4
-                                        class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                        File Structure</h4>
-                                    <div class="header-tools h-[30px] flex flex-row items-center justify-center">
-                                        <a href="#"
-                                            class="mr-[10px] gx-full-card w-[30px] h-[30px] flex items-center justify-center text-[#777] border-[1px] border-solid border-[#eee] rounded-[5px]">
-                                            <i class="ri-fullscreen-line text-[#777]" title="Full Screen"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="gx-card-content md:p-[24px] p-[15px]">
-                                    <div class="file-structure">
-                                        <ul class="gx-main-structure">
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                <a href="javascript:void(0)" class="gx-struct-drop text-[#777]"><i
-                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                        class="ri-folder-open-line"></i>assets</a>
-                                                <ul
-                                                    class="gx-sub ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]">
-                                                    <li
-                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                        <a href="javascript:void(0)" class="gx-struct-drop text-[#777]">
-                                                            <i class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                class="ri-folder-4-line"></i>css
-                                                        </a>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]">
-                                                                    <i class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>vendor
-                                                                </a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>bootstrap.css
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>animate.css
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>remixicon.css
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>materialdesignicon.css
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <i class="ri-file-list-2-line"></i>dark.css
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <i class="ri-file-list-2-line"></i>style.css
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul
-                                                    class="gx-sub ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]">
-                                                    <li
-                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                        <a href="javascript:void(0)"
-                                                            class="gx-struct-drop text-[#777]"><i
-                                                                class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                class="ri-folder-4-line"></i>Fonts</a>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-folder-4-line"></i>icon</a>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-folder-4-line"></i>nunito</a>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-folder-4-line"></i>poppins</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul
-                                                    class="gx-sub ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]">
-                                                    <li
-                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                        <a href="javascript:void(0)"
-                                                            class="gx-struct-drop text-[#777]"><i
-                                                                class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                class="ri-folder-4-line"></i>img</a>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>favicon</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-fill"></i>favicon.ico
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>favicon.png
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>features</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>1.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>2.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>3.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>4.png
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>logo</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>logo.png
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>sidebar</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-line"></i>1.jpg
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-line"></i>2.jpg
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-line"></i>3.jpg
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-line"></i>4.jpg
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>tools</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>bg-0.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>bg-1.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>bg-2.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>bg-3.png
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-image-2-line"></i>bg-4.png
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul
-                                                    class="gx-sub ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]">
-                                                    <li
-                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                        <a href="javascript:void(0)"
-                                                            class="gx-struct-drop text-[#777]"><i
-                                                                class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                class="ri-folder-4-line"></i>js</a>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>vendor</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>bootstrap.js
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>jquery-3.6.4.min.js
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <i class="ri-file-list-2-line"></i>main.js
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul
-                                                    class="gx-sub ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]">
-                                                    <li
-                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                        <a href="javascript:void(0)"
-                                                            class="gx-struct-drop text-[#777]"><i
-                                                                class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                class="ri-folder-4-line"></i>scss</a>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>base</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>_typography.scss
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>components</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>_breadcrumb.scss
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>_common.scss
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>_sidebar.scss
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>_tools-sidebar.scss
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>layouts</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>_cards.scss
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <a href="javascript:void(0)"
-                                                                    class="gx-struct-drop text-[#777]"><i
-                                                                        class="ri-arrow-up-s-line text-[20px]"></i><i
-                                                                        class="ri-folder-4-line"></i>utilities</a>
-                                                                <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                                    style="display: none;">
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i class="ri-file-list-2-line"></i>_mixins.scss
-                                                                    </li>
-                                                                    <li
-                                                                        class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                        <i
-                                                                            class="ri-file-list-2-line"></i>_variables.scss
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="gx-hide ml-[35px] pl-[15px] border-l-[1px] border-dashed border-[#ddd]"
-                                                            style="display: none;">
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <i class="ri-file-list-2-line"></i>dark.scss
-                                                            </li>
-                                                            <li
-                                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                                <i class="ri-file-list-2-line"></i>style.scss
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                                <a href="javascript:void(0)"><i
-                                                        class="ri-file-text-line"></i>index.html</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Starter Page -->
-                        <div class="gx-block">
-                            <div class="gx-card gx-page-block mb-[24px] bg-[#fff] rounded-[5px]" id="gx_starter">
-                                <div
-                                    class="gx-card-header header-575 p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                    <h4
-                                        class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                        Starter Page</h4>
-                                    <div class="header-tools h-[30px] flex flex-row items-center justify-center">
-                                        <a href="#"
-                                            class="mr-[10px] gx-full-card w-[30px] h-[30px] flex items-center justify-center text-[#777] border-[1px] border-solid border-[#eee] rounded-[5px]">
-                                            <i class="ri-fullscreen-line text-[#777]" title="Full Screen"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="gx-card-content md:p-[24px] p-[15px]">
-                                    <div class="file-starter">
-                                        <!-- Presentation code -->
-                                        <pre class="language-markup" tabindex="0">											<code class="language-markup">
-	<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ltr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IE=edge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>keywords<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>guide, doc, documentation, api doc, catalog, 
-		code documentation, doc, docs, documentation, documentation template, 
-		documentation tool, getting started, guide, help<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Guidex - Online Documentation Tailwind CSS Template.<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>author<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ashishmaraviya<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Guidex - Online Documentation Tailwind CSS Template.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>
-
-		<span class="token comment">&lt;!-- App favicon --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/img/favicon/favicon.ico<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-
-		<span class="token comment">&lt;!-- Icon CSS --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/css/vendor/materialdesignicons.min.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/css/vendor/remixicon.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-
-		<span class="token comment">&lt;!-- Vendor --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/css/vendor/bootstrap.min.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/css/vendor/prism.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-
-		<span class="token comment">&lt;!-- Main CSS --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mainCss<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/css/style.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper sb-default<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+					</ul><!--//social-list-->
+					<a class="btn btn-primary d-none d-lg-flex" href="docs-page.html#section-1">Go to Documentation</a>
+				</div><!--//docs-top-utilities-->
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
 
 
-		<span class="token comment">&lt;!-- Your content goes here --&gt;</span>
+	<div class="page-header theme-bg-dark py-5 text-center position-relative">
+		<div class="theme-bg-shapes-right"></div>
+		<div class="theme-bg-shapes-left"></div>
+		<div class="container">
+			<h1 class="page-heading single-col-max mx-auto">Unleash the Mystic Power of Web Development !</h1>
+			<!-- <div class="page-intro single-col-max mx-auto">Unleash the Mystic Power of Web Development</div> -->
+			<div class="main-search-box pt-3 d-block mx-auto">
+				<form class="search-form w-100">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</div><!--//page-header-->
+	<div class="page-content">
+		<div class="container">
+			<div class="docs-overview py-5">
+				<div id="page-content"></div>
+
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-4 py-3">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title mb-3">
+									<span class="theme-icon-holder card-icon-holder me-2">
+										<i class="fas fa-map-signs"></i>
+									</span><!--//card-icon-holder-->
+									<span class="card-title-text">Introduction</span>
+								</h5>
+								<div class="card-text">
+									ArcanPHP is a modern, PHP-based framework designed to provide developers with a
+									powerful and intuitive toolkit for
+									building web applications.
+								</div>
+								<a class="card-link-mask" href="docs-page.html#section-1"></a>
+							</div><!--//card-body-->
+						</div><!--//card-->
+					</div><!--//col-->
+					<div class="col-12 col-lg-4 py-3">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title mb-3">
+									<span class="theme-icon-holder card-icon-holder me-2">
+										<i class="fas fa-arrow-down"></i>
+									</span><!--//card-icon-holder-->
+									<span class="card-title-text">Installation</span>
+								</h5>
+								<div class="card-text">
+								Welcome to ArcanePHP! This guide will walk you through the installation process to get your ArcanePHP application up and
+								running.
+								</div>
+								<a class="card-link-mask" href="docs-page.html#section-2"></a>
+							</div><!--//card-body-->
+						</div><!--//card-->
+					</div><!--//col-->
+					<div class="col-12 col-lg-4 py-3">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title mb-3">
+									<span class="theme-icon-holder card-icon-holder me-2">
+										<i class="fas fa-box fa-fw"></i>
+									</span><!--//card-icon-holder-->
+									<span class="card-title-text">APIs</span>
+								</h5>
+								<div class="card-text">
+									Stay tuned
+								</div>
+								<a class="card-link-mask" href="docs-page.html#section-3"></a>
+							</div><!--//card-body-->
+						</div><!--//card-->
+					</div><!--//col-->
+		
+				</div><!--//row-->
 
 
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
-		<span class="token comment">&lt;!-- Vendor Custom --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/js/vendor/jquery-3.6.4.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/js/vendor/bootstrap.bundle.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/js/vendor/prism.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-		<span class="token comment">&lt;!-- Main Custom --&gt;</span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>assets/js/main.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code>
-										</pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Customization -->
-                        <div class="gx-block">
-                            <div class="gx-card gx-page-block mb-[24px] bg-[#fff] rounded-[5px]" id="gx_custom">
-                                <div
-                                    class="gx-card-header header-575 p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                    <h4
-                                        class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                        Customization</h4>
-                                    <div class="header-tools h-[30px] flex flex-row items-center justify-center">
-                                        <a href="#"
-                                            class="mr-[10px] gx-full-card w-[30px] h-[30px] flex items-center justify-center text-[#777] border-[1px] border-solid border-[#eee] rounded-[5px]">
-                                            <i class="ri-fullscreen-line text-[#777]" title="Full Screen"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="gx-card-content md:p-[24px] p-[15px]">
-                                    <div class="file-customization">
-                                        <ul>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Navigation Bar: </strong>The template
-                                                usually includes a navigation
-                                                bar at the right sidebar, allowing users to jump to different sections
-                                                of
-                                                the documentation quickly. This helps users find specific information
-                                                without
-                                                scrolling through the entire page.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Introduction: </strong>This section
-                                                provides an overview of the
-                                                template or project, explaining its purpose, key features, and the
-                                                problems
-                                                it aims to solve. It helps users understand the context of the
-                                                documentation
-                                                and what they can expect from the template.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Installation: </strong>The installation
-                                                section guides users through
-                                                the process of setting up the template or integrating it into their
-                                                projects. It may include code snippets, terminal commands, or
-                                                step-by-step
-                                                instructions for various platforms.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Usage: </strong>In this section, users
-                                                learn how to use the template
-                                                effectively. It typically includes code examples, explanation of
-                                                important
-                                                functions, and demonstration of how to achieve specific tasks.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Components: </strong>For template
-                                                libraries or frameworks, this
-                                                section outlines the various components and modules available and
-                                                describes
-                                                their functionalities. It helps users understand the building blocks of
-                                                the
-                                                template.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">License: </strong>This section specifies
-                                                the template's licensing
-                                                terms and conditions. It ensures users are aware of how they can use,
-                                                modify the template legally. and not for distribution or resale.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Additional Resources: </strong>Some
-                                                templates include a section for
-                                                additional resources, such as links to tutorials, community forums, or
-                                                support channels. It encourages users to explore more about the template
-                                                and
-                                                engage with the community.
-                                            </li>
-                                            <li
-                                                class="py-[10px] text-[#777] text-[14px] tracking-[0.03rem] font-light leading-[28px]">
-                                                <strong class="font-semibold">Styling and Responsiveness: </strong>The
-                                                template often incorporates
-                                                CSS styles to ensure the documentation is visually appealing and easy to
-                                                read. It may also use responsive design to adapt to different screen
-                                                sizes
-                                                and devices.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Sidebar Topics -->
-                    <div class="gx-side-overlay w-full h-screen fixed top-0 left-0 z-[41] bg-[#00000080]"></div>
-                    <div class="min-[1200px]:w-[25%] px-[12px] gx-topic">
-                        <div class="gx-card topic-sidebar mb-[24px] bg-[#fff] rounded-[5px] sticky top-[94px] h-[calc(100vh-120px)]"
-                            id="fxmap">
-                            <div
-                                class="gx-card-header p-[24px] border-b-[1px] border-solid border-[#eee] flex flex-row justify-between items-center">
-                                <h4
-                                    class="m-0 text-[18px] leading-[1.2] text-[#484d54] font-bold capitalize flex items-center cursor-default">
-                                    Topics</h4>
-                                <a href="javascript:void(0)"
-                                    class="close-topic text-[17px] text-[#ff4f7f] leading-[1.2]"><i
-                                        class="ri-close-line"></i></a>
-                            </div>
-                            <div class="gx-card-content gx-topic-list md:p-[24px] p-[15px]">
-                                <nav>
-                                    <ul class="topic-list">
-                                        <li
-                                            class="text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                            <a class="topic active mb-[5px] p-[15px] flex rounded-[5px] bg-[#dfe6ed4d] font-medium border-[1px] border-solid border-transparent hover:border-[#5f6af5] hover:text-[#5f6af5]"
-                                                href="#gx_instructions">Introduction</a>
-                                        </li>
-                                        <li
-                                            class="text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                            <a class="topic mb-[5px] p-[15px] flex rounded-[5px] bg-[#dfe6ed4d] font-medium border-[1px] border-solid border-transparent hover:border-[#5f6af5] hover:text-[#5f6af5]"
-                                                href="#gx_features">Core Features</a>
-                                        </li>
-                                        <li
-                                            class="text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                            <a class="topic mb-[5px] p-[15px] flex rounded-[5px] bg-[#dfe6ed4d] font-medium border-[1px] border-solid border-transparent hover:border-[#5f6af5] hover:text-[#5f6af5]"
-                                                href="#gx_structure">File Structure</a>
-                                        </li>
-                                        <li
-                                            class="text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                            <a class="topic mb-[5px] p-[15px] flex rounded-[5px] bg-[#dfe6ed4d] font-medium border-[1px] border-solid border-transparent hover:border-[#5f6af5] hover:text-[#5f6af5]"
-                                                href="#gx_starter">Starter Page</a>
-                                        </li>
-                                        <li
-                                            class="text-[#777] text-[14px] leading-[21px] tracking-[0.03rem] font-light">
-                                            <a class="topic mb-[5px] p-[15px] flex rounded-[5px] bg-[#dfe6ed4d] font-medium border-[1px] border-solid border-transparent hover:border-[#5f6af5] hover:text-[#5f6af5]"
-                                                href="#gx_custom">Customization</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			</div><!--//container-->
+		</div><!--//container-->
+	</div><!--//page-content-->
 
-        <!-- Feature tools -->
-  
+	<!-- <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+		<div class="theme-bg-shapes-right"></div>
+		<div class="theme-bg-shapes-left"></div>
+		<div class="container">
+			<h3 class="mb-2 text-white mb-3">Launch Your Software Project Like A Pro</h3>
+			<div class="section-intro text-white mb-3 single-col-max mx-auto">Want to launch your software project and
+				start getting traction from your target users? Check out our premium <a class="text-white"
+					href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/">Bootstrap
+					5 startup template CoderPro</a>! It has everything you need to promote your product.</div>
+			<div class="pt-3 text-center">
+				<a class="btn btn-light"
+					href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/">Get
+					CoderPro<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+			</div>
+		</div>
+	</section>//cta-section -->
 
-    </main>
-
-    <!-- Vendor Custom -->
-    <script src="assets/js/vendor/jquery-3.6.4.min.js"></script>
-    <script src="assets/js/vendor/prism.js"></script>
-    <!-- Main Custom -->
-    <script src="assets/js/main.js"></script>
-
-
+	<script>fetch('components/footer.html')
+			.then(response => response.text())
+			.then(data => {
+				document.body.insertAdjacentHTML('beforeend', data);
+			})
+			.catch(error => console.error('Error loading footer section:', error));</script>
 </body>
 
 </html>

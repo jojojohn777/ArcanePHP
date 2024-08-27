@@ -1,0 +1,9 @@
+{
+    "named-route":{
+        "1":"<use><\\Core\\Router><;>",
+        "2":"[space]",
+        "3":"<Router><::get><('',function(){>",
+        "4":"<return><'welcome to ArcanePHP'><;>",
+        "5":"});"
+    }
+}

@@ -1,0 +1,59 @@
+Before creating a acranePHP project ,Make sure your system  have php ,git, xampp and composer installed.
+After you have installed PHP and Composer, you may create a new Laravel project via Composer's create-project command:
+
+After you have installed xampp ,you may clone new project instance from GIT.
+
+
+Once you have started the xampp server,
+ your application will be accessible in your web browser at http://localhost:[your port number]/my-project/.
+
+
+when written this :
+<div json-named-route></div>
+
+ i want to generate this html using js :
+
+
+	<div class="docs-code-block code-block" named-route>
+							<pre class="shadow-lg rounded"><code class="json hljs">
+	<span class="hljs-attr">use \</span><span class="hljs-string">Core\Router</span>;
+	
+	<span class="keyword">Router::get</span>(<span class="string">'/welcome'</span>, <span class="keyword">function</span> () {
+	<span class="keyword">return</span> <span class="string">'Welcome to ArcanePHP!';
+	});</span></code></pre>
+						</div>
+
+
+according to this json:
+{
+    "named-route":{
+        "1":"<use><\\Core\\Router><;>",
+        "2":"[space]",
+        "3":"<return><'welcome to ArcanePHP'><;>",
+        "4":"});"
+    }
+}
+
+note there is going to be more json
+
+what if more tho ..
+const jsonData = {
+    "named-route": {
+        "1": "<use><\\Core\\Router><;>",
+        "2": "[space]",
+        "3": "<return><'welcome to ArcanePHP'><;>",
+        "4": "});" ,
+         "another-named-route": {
+        "1": "<use><\\Core\\Router><;>",
+        "2": "[space]",
+        "3": "<return><'welcome to ArcanePHP'><;>",
+        "4": "});"
+    }
+};
+
+you know the idea is i am only going to call a div
+
+<div json-named-route></div>
+<div json-another-named-route></div>
+
+so the js has to fill inside the div automatically
