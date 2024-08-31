@@ -1,0 +1,7 @@
+.env
+.DS_Store
+
+# Ignore specific directories
+/vendor
+/node_modules
+/public/uploads

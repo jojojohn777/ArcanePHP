@@ -1,0 +1,63 @@
+
+Optional Parameters
+
+Route parameters can also be made optional by adding a ? after the parameter name.
+
+php
+
+use \Core\Router;
+
+Router::get('/user/{name?}', function ($name = 'Guest') {
+    return "Hello, $name";
+});
+
+Here, if no name is provided in the URI, the route will default to "Guest".
+
+
+Route Prefixes
+
+Route prefixes allow you to group routes under a common URI segment, which is useful for organizing related routes.
+
+php
+
+use \Core\Router;
+
+Router::prefix('admin', function () {
+    Router::get('/dashboard', function () {
+        return 'Admin Dashboard';
+    });
+
+    Router::get('/settings', function () {
+        return 'Admin Settings';
+    });
+});
+
+All routes within the prefix closure will be prefixed with /admin, so /admin/dashboard and /admin/settings will be valid URIs.
+
+Route Redirection
+
+ArcanePHP provides a simple method to define routes that redirect to other URIs. This is useful for handling legacy URLs or guiding users to updated routes.
+
+php
+
+use \Core\Router;
+
+Router::redirect('/old-home', '/home');
+
+In this case, visiting /old-home will automatically redirect the user to /home.
+Route Fallbacks
+
+Fallback routes handle requests that don’t match any of the defined routes. This is typically used for displaying a custom 404 page.
+
+php
+
+use \Core\Router;
+
+Router::fallback(function () {
+    return 'Page Not Found';
+});
+
+If a user attempts to access a non-existent route, they will be presented with a "Page Not Found" message.
+
+
+

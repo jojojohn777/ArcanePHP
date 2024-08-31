@@ -57,3 +57,95 @@ you know the idea is i am only going to call a div
 <div json-another-named-route></div>
 
 so the js has to fill inside the div automatically
+
+
+
+
+
+
+now about request Requests
+
+but give  thee  details about this  in following format:
+
+		<header class="docs-header">
+						<h1 class="docs-heading">Essentials</h1>
+						<section class="docs-intro">
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Rwquests</h2>
+						<p>
+							ArcanePHP's Router provides an intuitive and straightforward way to define routes, allowing
+							developers to map URIs to
+							specific behaviors within their application with minimal configuration. With ArcanePHP,
+							routing is designed to be simple
+							yet powerful, making it easy to manage your application's endpoints.
+						</p>
+						<p>You can define routes by specifying a URI and a closure, which handles the request. This
+							approach ensures that your
+							routes are both easy to read and maintain, without the need for extensive routing
+							configuration files.</p>
+						<div json-welcome-route></div>
+					</section><!--//section-->
+
+also give  json array for the php codes like this in the end :
+
+  "dependency-injection": {
+    attribute: "dependency-injection-code",
+    lines: [
+      "    <attr>namespace </attr><string>App\\Controllers</string>;",
+      "    ",
+      "    <attr>use </attr><string>\\Core\\Controller</string>;",
+      "    <attr>use </attr><string>\\App\\Services\\UserService</string>;",
+      "",
+      "    <keyword>class</keyword> <class-name>ProfileController</class-name> <keyword>extends</keyword> <class-name>Controller</class-name>",
+      "    {",
+      "        <keyword>protected</keyword> <property-name>$userService</property-name>;",
+      "",
+      "        <keyword>public function</keyword> <function-name>__construct</function-name>(<class-name>UserService</class-name> <param>$userService</param>)",
+      "        {",
+      "            <keyword>this</keyword>-><property-name>userService</property-name> = <param>$userService</param>;",
+      "        }",
+      "",
+      "        <keyword>public function</keyword> <function-name>show</function-name>(<param>$post_id</param>)",
+      "        {",
+      "            <variable>$user</variable> = <keyword>this</keyword>-><property-name>userService</property-name>-><function-call>find</function-call>(<param>$post_id</param>);",
+      "            <keyword>return</keyword> <string>'User Name: '</string>.<variable>$user</variable>-><property-name>name</property-name>;",
+      "        }",
+      "    }",
+    ],
+  },
+
+
+
+
+lets do this again 
+
+document this :
+gpt user can send request to a controller by using this syntax
+
+		
+ajax-[html classname]:[urlname]:needs-[[table name]:[column name,..]] --[request method]
+
+
+example :
+  also add example form 
+
+html exmaple
+    {{ for( posts, '
+        {{csrf()}}
+      <div class="post-card">
+      <button class="post-delete-btn">Delete Post</button>
+      </div>
+    }}
+
+route example
+Router::post('post/delete/{post_id}')->to(PostController::class, 'destroy')->callAs('delete_post');
+
+so use this feature like this 
+
+ajax-post-delete-btn:delete_post:needs-post:post_id --delete
+	
+
+
+also give the php code in json
